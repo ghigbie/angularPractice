@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app>
     <head>
         <title>Angular ng-show</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="./../public/stylesheets/app.css"/>
     </head>
     <body>
-        <div class="container"
+        <div class="container">
             <h1>Angualr ng-show</h1>
             <br>
-            <button class="brn-primary">Click to Show</button>
+            Check to See How Awesome you are: <input type="checkbox" ng-model="myVar">
+            <br>
+            <div ng-cloak>
+                <h1 ng-show="myVar">You are Super Awesome!</h1>
+            </div>
         </div>
         <script src="./../node_modules/angular/angular.min.js"></script>
     </body>
