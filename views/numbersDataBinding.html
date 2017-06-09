@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en" ng-app>
+        <title>Angualr Data Binding with Numbers</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../public/stylesheets/app.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Angualr Data Binding with Numbers</h1>
+            <h3>Calculating Area of a Retangle</h3>
+            <div class="form-group">
+                <lable for="length">What is the length of the rectangle?</lable>
+                <input type="text" name="length" id="length" ng-model="length">
+            </div>
+            
+            <div class="form-gorup"> 
+                <lable for="width">What is the width of the rectangle</lable>
+                <input type="text" name"width" id="width" ng-model="width">
+            </div>
+            
+            <div>
+                <input type="submit" id="button">
+            </div>
+            
+            <div ng-cloak>
+                <h3 id="hidden">The area is: {{length * width}}</h3>
+            </div>
+        </div>
+    </body>
+    <script src="./../node_modules/angular/angualr.js"></script>
+</html>
