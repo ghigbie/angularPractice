@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html>
-    <head lang="en" ng-app>
-        <title>Angualr Data Binding with Numbers</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./../public/stylesheets/app.css">
+<html lang="en" ng-app>
+    <head>
+         <title>Angular Data Binding</title>   
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" href="./../public/stylesheets/app.css">
     </head>
-    <body>
+    <body ng-cloak>
         <div class="container">
-            <h1>Angualr Data Binding with Numbers</h1>
-            <h3>Calculating the Area of a Retangle</h3>
+            <h1>Data Binding with Numbers</h1>
             <div class="form-group">
-                <lable for="length">What is the length of the rectangle?</lable>
-                <input type="text" class="form-control" name="length" id="length" ng-model="length">
-            </div>
-            <div class="form-group"> 
-                <lable for="width">What is the width of the rectangle?</lable>
-                <input type="text" class="form-control" name="width" id="width" ng-model="width">
+                <lable for="first">What is the Length of the Rectangle?</lable>
+                <input type="number" min="1" class="form-control" name="length" id="length" ng-model="length">
             </div>
             <div class="form-group">
+                <lable for="last">What is the Width of the Rectangle?</lable>
+                <input type="number" min="1" class="form-control" name="width" id="width" ng-model="width">
+            </div>
+            <div class"form-group">
                 <input type="submit" class="btn-primary" id="submit" name="submit">
             </div>
-            
-            <h3 id="hidden" ng-cloak>The area is: {{length}} {{ width}}</h3>
-            
+            <h3 id="hidden" ng-cloak>The area of the rectangle is: {{length * width}}</h3>
         </div>
-        <script src="./../node_modules/angular/angular.js"></script>
-        <script src="./../public/js/scripts.js"></script>
+        
+         <script src="./../node_modules/angular/angular.js"></script>
+         <script src="./../public/js/scripts.js"></script>
     </body>
 </html>
