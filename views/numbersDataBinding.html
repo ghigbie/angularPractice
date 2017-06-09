@@ -8,25 +8,23 @@
     <body>
         <div class="container">
             <h1>Angualr Data Binding with Numbers</h1>
-            <h3>Calculating Area of a Retangle</h3>
+            <h3>Calculating the Area of a Retangle</h3>
             <div class="form-group">
                 <lable for="length">What is the length of the rectangle?</lable>
-                <input type="text" name="length" id="length" ng-model="length">
+                <input type="text" class="form-control" name="length" id="length" ng-model="length">
+            </div>
+            <div class="form-group"> 
+                <lable for="width">What is the width of the rectangle?</lable>
+                <input type="text" class="form-control" name="width" id="width" ng-model="width">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn-primary" id="submit" name="submit">
             </div>
             
-            <div class="form-gorup"> 
-                <lable for="width">What is the width of the rectangle</lable>
-                <input type="text" name"width" id="width" ng-model="width">
-            </div>
+            <h3 id="hidden" ng-cloak>The area is: {{length}} {{ width}}</h3>
             
-            <div>
-                <input type="submit" id="button">
-            </div>
-            
-            <div ng-cloak>
-                <h3 id="hidden">The area is: {{length * width}}</h3>
-            </div>
         </div>
+        <script src="./../node_modules/angular/angular.js"></script>
+        <script src="./../public/js/scripts.js"></script>
     </body>
-    <script src="./../node_modules/angular/angualr.js"></script>
 </html>
