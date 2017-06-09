@@ -11,6 +11,12 @@
             <ul ng-cloak>
                <li ng-repeat="person in people"> {{person.name}} -- {{person.city}}</li>
             </ul>
+            
+            <div ng-init="tech=[{name: 'Web', lang: 'Javascript'}, {name: 'Android', lang: 'Java'}, {name: 'iOS', lang: 'Swift'}]">
+                <ul ng-cloak>
+                    <li ng-repeat="item in tech">{{item.name}} -- {{item.lang}}</li>
+                </ul>
+            </div>
         </div>
         <script src="./../node_modules/angular/angular.min.js"></script>
     </body>
