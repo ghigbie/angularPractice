@@ -3,9 +3,9 @@
     <head>
          <title>Agular Data Binding</title>   
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-         <link rel="stylesheet" href="./../public/stylesheets/app.css"
+         <link rel="stylesheet" href="./../public/stylesheets/app.css">
     </head>
-    <body>
+    <body ng-cloak>
         <div class="container">
             <h1>Data Binding</h1>
             <div class="form-group">
@@ -19,7 +19,7 @@
             <div class"form-group">
                 <input type="submit" class="btn-primary" id="submit" name="submit">
             </div>
-            <h3 id="welcome"> Welcome {{first}} {{last}}</h3>
+            <h3 id="welcome" ng-cloak>Welcome {{first}} {{last}}</h3>
         </div>
         
          <script src="./../node_modules/angular/angular.js"></script>
