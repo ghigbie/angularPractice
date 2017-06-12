@@ -2,10 +2,22 @@
 <html lang="en" ng-app>
     <head>
         <title>Table Iteration with Ng-Repeat</title>
-        <
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="./../public/stylesheets/app.css"/>
     </head>
     <body>
-        
+        <div class="container" ng-init="people=[{name: 'Choah', city: 'Seoul'}, {name: 'Aiko', city: 'Nagoya'}, {name: 'Kat', city: 'Manilla'}, {name: 'Ellen', city: 'Taipei'}, {name: 'Fei', city:'Shanghai'}, {name: 'Suzi', city: 'Shanghai'}]">
+        <table class="table-hover">
+            <tr>
+                <td>Name</td>
+                <td>City</td>
+            </tr>
+            <tr ng-repeat="person in people"> {{person.name}} -- {{person.city}}>
+                <td>{{ person.name }}</td>
+                <td>{{ person.city }}</td>
+            </tr>
+        </table>
+        </div>
         <script src="./../node_modules/angular/angular.min.js"></script>
     </body>
 </html>
