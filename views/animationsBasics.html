@@ -6,7 +6,17 @@
         <link rel="stylesheet" href="./../public/stylesheets/app.css"/>
     </head>
     <body>
-        <h1>Animations in Angular</h1>
+        <div class="container">
+            <h1>Animations in Angular</h1>
+            <div ng-init="checked = true">
+                <lable>
+                    <input type="checkbox" ng-model="checked"/>Is visible
+                </lable>
+            <div class="content-area sample-show-hide" ng-show="checked">
+                <button>I can go away!</button>
+            </div>
+            </div>
+        </div>
         <script src="./../node_modules/angular/angular.min.js"></script>
     </body>
 </html>
