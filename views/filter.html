@@ -5,7 +5,7 @@
         <title>Data Filtering with AngularJS</title>
     </head>
     <body>
-        <div class="container" ng-init="customers=[{name: 'John', city: 'Chandler', joined: 2000-12-02}, {name: 'Mary', city: 'Englewood', joined: 2010-10-12}, {name: 'Huck', city: 'Yuma', joined: 2013-09-09}]">
+        <div class="container" ng-init="customers=[{name: 'John', city: 'Chandler', joined: 2000-12-02, orderTotal: 300}, {name: 'Mary', city: 'Englewood', joined: 2010-10-12, orderTotal: 400}, {name: 'Huck', city: 'Yuma', joined: 2013-09-09, orderTotal: 500}]">
             <h1>Data Filtering with AngularJS</h1>
             <table>
                 <tr>
@@ -14,10 +14,14 @@
                     <th>Order Total</th>
                     <th>Joined</th>
                 </tr>
-                <tr>
+                <tr ng-repeat="cust in customers">
                     <td>{{ cust.name }}</td>
+                    <td>{{ cust.city }}</td>
+                    <td>{{ cust.orderTotal  | currency }}</td>
+                    <td>{{ cust.joined }}</td>
                 </tr>
             </table>
         </div>
+        <script src="./../node_modules/angular/angular.js"></script>
     </body>
 </html>
