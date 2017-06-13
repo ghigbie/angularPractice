@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>Controllers in Angular (Separate)</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="./../public/stylesheets/app.css"/>
+    </head>
+    <body>
+         <div class="container">
+         <h1>Comtollers in AngularJS (Separate)</h1>
+            <h1>Simple Controller with AngularJS</h1>
+            Filter: <input type="text" ng-model="customerFilter.name">
+            <br><br>
+            <table class="table">
+                <tr>
+                    <th ng-click="doSort('name')">Name</th>
+                    <th ng-click="doSort('city')">City</th>
+                    <th ng-click="doSort('orderTotal')">Order Total</th>
+                    <th ng-click="doSort('joined')">Joined</th>
+                </tr>
+                <tr ng-repeat="cust in customers | filter: customerFilter | orderBy:sortBy:reverse" ng-cloak >
+                    <td>{{ cust.name | uppercase }}</td>
+                    <td>{{ cust.city  | lowercase }}</td>
+                    <td>{{ cust.orderTotal  | currency }}</td>
+                    <td>{{ cust.joined | date}}</td>
+                </tr>
+            </table>
+            <br>
+            <span> Total Customers: {{ customers.length }}</span>
+        </div>
+        <script src="./../node_modules/angular/angular.js"></script>
+        <script src="./../app/controllers/customersController.js"></script>
+    </body>
+</html>
