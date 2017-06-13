@@ -16,11 +16,11 @@
                     <th>Order Total</th>
                     <th>Joined</th>
                 </tr>
-                <tr ng-repeat="cust in customers" ng-cloak>
+                <tr ng-repeat="cust in customers | limitTo: 2" ng-cloak>
                     <td>{{ cust.name | uppercase }}</td>
                     <td>{{ cust.city  | lowercase }}</td>
                     <td>{{ cust.orderTotal  | currency }}</td>
-                    <td>{{ cust.joined | date: "long date"}}</td>
+                    <td>{{ cust.joined | date}}</td>
                 </tr>
             </table>
         </div>
