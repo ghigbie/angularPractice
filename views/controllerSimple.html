@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./../public/stylesheets/app.css"/>
     </head>
     <body>
-        <div class="container">
+        <div class="container" data-ng-controller="customersController">
             <h1>Simple Controller with AngularJS</h1>
             Filter: <input type="text" ng-model="customerFilter.name">
             <br><br>
@@ -29,7 +29,7 @@
             <span> Total Customers: {{ customers.length }}</span>
         </div>
         <script>
-            function CustomersController($scope){
+            function customersController($scope){
                 $scope.sortBy = 'name' //provides a default sort
                 $scope.reverse = 'false' //provides a ascending default
                 
