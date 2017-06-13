@@ -7,8 +7,10 @@
         <link rel="stylesheet" href="./../public/stylesheets/app.css"/>
     </head>
     <body>
-        <div class="container" ng-init="customers=[{name: 'John', city: 'Chandler', joined: '2000-12-02', orderTotal: 300}, {name: 'Mary', city: 'Englewood', joined: '2010-10-12', orderTotal: 400}, {name: 'Huck', city: 'Yuma', joined: '2013-09-09', orderTotal: 500}]">
+        <div class="container" ng-init="customers=[{name: 'John', city: 'Chandler', joined: '2000-12-02', orderTotal: 300}, {name: 'Mary', city: 'Englewood', joined: '2010-10-12', orderTotal: 400}, {name: 'Huck', city: 'Yuma', joined: '2013-09-09', orderTotal: 500}, {name: 'Jackie', city: 'Chandler', joined: '2000-12-02', orderTotal: 300}, {name: 'Monika', city: 'Englewood', joined: '2010-10-12', orderTotal: 400},]">
             <h1>Limits with AngularJS</h1>
+            Filter: <input type="text" ng-model="customerFilter.name">
+            <br><br>
             <table class="table">
                 <tr>
                     <th>Name</th>
@@ -16,7 +18,7 @@
                     <th>Order Total</th>
                     <th>Joined</th>
                 </tr>
-                <tr ng-repeat="cust in customers | limitTo: 2" ng-cloak>
+                <tr ng-repeat="cust in customers | filter: customerFilter | orderBy: 'name'" ng-cloak >
                     <td>{{ cust.name | uppercase }}</td>
                     <td>{{ cust.city  | lowercase }}</td>
                     <td>{{ cust.orderTotal  | currency }}</td>
