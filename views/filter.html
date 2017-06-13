@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>Data Filtering with AngularJS</title>
+    </head>
+    <body>
+        <div class="container" ng-init="customers=[{name: 'John', city: 'Chandler', joined: 2000-12-02}, {name: 'Mary', city: 'Englewood', joined: 2010-10-12}, {name: 'Huck', city: 'Yuma', joined: 2013-09-09}]">
+            <h1>Data Filtering with AngularJS</h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Order Total</th>
+                    <th>Joined</th>
+                </tr>
+                <tr>
+                    <td>{{ cust.name }}</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

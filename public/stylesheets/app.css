@@ -24,7 +24,7 @@ body{
 }
 
 .sample-show-hide{
-    transition: all linear 0.5s;
+    transition: all linear 2s;
 }
 
 .sample-show-hide.ng-hide{
