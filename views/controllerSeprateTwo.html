@@ -17,8 +17,11 @@
                     <th ng-click="doSort('name')">Order Total</th>
                     <th ng-click="doSort('name')">Joined</th>
                 </tr>
-                <tr>
-                    <td>{{ cust.name | uppercasse }}</td>
+                <tr ng-repeat="cust in customers">
+                    <td>{{ cust.name | uppercase }}</td>
+                    <td>{{ cust.city | lowercase }}</td>
+                    <td>{{ cust.orderTotal | currency }}</td>
+                    <td>{{ cust.joined | date }}</td>
                 </tr>
             </table>
             
