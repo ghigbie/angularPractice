@@ -1,6 +1,6 @@
 function CustomersController($scope){
-    $scope.sortBy = 'name' //provides a default sort
-    $scope.reverse = 'false' //provides a ascending default
+    $scope.sortBy = 'name'; //provides a default sort
+    $scope.reverse = 'false'; //provides a ascending default
                 
     $scope.customers = [
         {name: 'John', city: 'Chandler', joined: '2000-12-02', orderTotal: 300}, 
