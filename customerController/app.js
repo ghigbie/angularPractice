@@ -1,5 +1,5 @@
 /* global angular*/
 
 (function() {
-    angular.module('customersApp', []);
+    var app = angular.module('customersApp', []);
 }());
