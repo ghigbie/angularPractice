@@ -16,8 +16,11 @@
                     <th ng-click="doSort('orderTotal')">Order Total</th>
                     <th ng-click="doSort('joined')">Joined</th>
                 </tr>
-                <tr>
-                    <td></td>
+                <tr ng-repeat="cust in customers" | >
+                    <td> {{ cust.name }}</td>
+                    <td> {{ cust.city }}</td>
+                    <td> {{ cust.orderTotal | currency }}</td>
+                    <td> {{ cust.joined | date }}</td>
                 </tr>
             </table>
         </div>
