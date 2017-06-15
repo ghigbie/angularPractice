@@ -1,1 +1,5 @@
-var app = angular.module('customersApp', []);
+/* global angular*/
+
+(function() {
+    angular.module('customersApp', []);
+}());
