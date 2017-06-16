@@ -24,6 +24,5 @@
     CustomersController.inject('$scope');
     angular.module('customersApp')
         .controller('CustomersController', CustomersController);
-        
-    
 }());
+
