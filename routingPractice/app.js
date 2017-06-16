@@ -8,7 +8,8 @@
             .when('/', {
                 controller: 'CustomersController',
                 templateUrl: 'views/customer.html'
-            });
+            })
+            .otherwise( {redirectTo: '/'} );
             
     })
 }());
