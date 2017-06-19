@@ -6,26 +6,8 @@
         <link rel="stylesheet" href="./../public/stylesheets/app.css"/>
     </head>
     <body>
-        <div class="container" ng-controller="CustomersController">
-            <h1>Working with Routes</h1>
-            <br>
-            <table>
-                <tr>
-                    <th ng-click="doSort('name')">Name</th>
-                    <th ng-click="doSort('city')">City</th>
-                    <th ng-click="doSort('orderTotal')">Order Total</th>
-                    <th ng-click="doSort('joined')">Joined</th>
-                </tr>
-                <tr ng-repeat="cust in customers | filter: customerFilter | orderBy:sortBy:reverse" ng-cloak>
-                    <td> {{ cust.name | uppercase }}</td>
-                    <td> {{ cust.city | lowercase }}</td>
-                    <td> {{ cust.orderTotal | currency }}</td>
-                    <td> {{ cust.joined | date }}</td>
-                </tr>
-            </table>
-            <br>
-            <h3>Total Customers: {{ customers.length }}</h3>
-        </div>
+        <div ng-view></div>
+        
         <script src="./../../node_modules/angular/angular.min.js"></script>
         <script src="./../../node_modules/angualr-route/angular-route.min.js"></script>
         <script src="./../controller.js"></script>

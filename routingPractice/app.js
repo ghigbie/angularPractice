@@ -3,7 +3,7 @@
 (function(){
     let app = angular.module('customersApp', ['ngRoutes']);
     
-    app.cponfig(function($routeProvider){
+    app.config(function($routeProvider){
         $routeProvider
             .when('/', {
                 controller: 'CustomersController',
