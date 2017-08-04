@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>Data Biding 2 (One Way)</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../public/stylesheets/app.css">
+    </head>
+    <body>
+        <div class="container" data-ng-controller>
+            <h1>Data Binding 2 (One Way)</h1>
+            <div class="form-group">
+                <label>Please enter your first name below:</label>
+                <input type="text" class="form-control" data-ng-model="first">
+            </div>
+            <div class="form-group">
+                <lable>Please enter your last name below:</lable>
+                <input type="text" class="form-control" data-ng-model="last">
+            </div>
+            <div data-ng-cloak>
+                {{ first + last }}
+            </div>
+            
+        </div>
+    </body>
+</html>
