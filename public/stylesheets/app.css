@@ -30,3 +30,15 @@ body{
 .sample-show-hide.ng-hide{
     opacity: 0.5;
 }
+
+.red {
+    color: red;
+}
+
+.orange{
+    color: orange;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
