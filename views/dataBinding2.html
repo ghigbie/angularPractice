@@ -7,17 +7,17 @@
         <link rel="stylesheet" href="./../public/stylesheets/app.css">
     </head>
     <body>
-        <div class="container" data-ng-controller>
+        <div class="container" ng-cloak>
             <h1>Data Binding 2 (One Way)</h1>
             <div class="form-group">
                 <label>Please enter your first name below:</label>
-                <input type="text" class="form-control" data-ng-model="first">
+                <input type="text" class="form-control" ng-model="first">
             </div>
             <div class="form-group">
                 <lable>Please enter your last name below:</lable>
-                <input type="text" class="form-control" data-ng-model="last">
+                <input type="text" class="form-control" ng-model="last">
             </div>
-            <div data-ng-cloak>
+            <div ng-cloak>
                 {{ first + last }}
             </div>
             
