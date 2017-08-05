@@ -7,12 +7,26 @@
     </head>
     <body ng-init="people=[{name: 'Aiko', city: 'Nagoya'}, {name: 'An', city: 'Shanghai'}, {name: 'Kat', city: 'Manilla'}]">
         <div class="container">
+            <h1>ng-Repeat with an Array</h1>
             
             <div ng-repeat="person in people">
-                <button class="btn btn-warning">{{ people.name }}</button> <span>{{ people.city }}</span>
+                <button class="btn btn-warning" ng-click="isVisible">{{ person.name }}</button> <span >{{ person.name }} is from {{ person.city }}</span>
             </div>
         </div>
         
-          <script src="./../node_modules/angular/angular.min.js"></script>
+        <div class="container">
+            <table class="table" ng-cloak>
+                <tr>
+                    <th><strong>Name</strong></th>
+                    <th><strong>City</strong></th>
+                </tr>
+                <tr ng-repeat="person in people">
+                    <td> {{ person.name }}</td>
+                    <td> {{ person.city }}</td>
+                </tr>
+            </table>
+        </div>
+        
+         <script src="./../node_modules/angular/angular.min.js"></script>
     </body>
 </html>
